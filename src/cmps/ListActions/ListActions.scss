@@ -1,0 +1,25 @@
+@import "../../assets/scss/global.scss";
+
+.list-actions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .list-actions-content {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    > * {
+      padding: 10px;
+    }
+    .add-contact-button,
+    .sort-icon {
+      cursor: pointer;
+      :hover {
+        color: $clr1;
+      }
+    }
+  }
+}

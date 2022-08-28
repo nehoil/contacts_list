@@ -1,0 +1,31 @@
+@import "../../assets/scss/global.scss";
+
+.login-container {
+  background-image: linear-gradient(
+    174.2deg,
+    rgba(255, 244, 228, 0.301) 7.1%,
+    rgba(240, 246, 238, 0.226) 67.4%
+  );
+  height: calc(100vh - 72px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .login-content {
+    h1 {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 50%;
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+  button {
+    background-color: $clr1;
+    border: 1px solid $clr1;
+    color: $clr5;
+  }
+}

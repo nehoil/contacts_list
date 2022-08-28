@@ -1,0 +1,12 @@
+@import "../../assets/scss/global.scss";
+
+.list-title-container {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+  .countries-count {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}

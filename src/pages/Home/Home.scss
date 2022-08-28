@@ -1,0 +1,13 @@
+@import "../../assets/scss/global.scss";
+
+.home-container {
+  background-image: linear-gradient(
+    174.2deg,
+    rgba(255, 244, 228, 0.301) 7.1%,
+    rgba(240, 246, 238, 0.226) 67.4%
+  );
+  height: calc(100vh - 72px);
+  .home-content {
+    padding-top: 50px;
+  }
+}

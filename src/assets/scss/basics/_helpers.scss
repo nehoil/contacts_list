@@ -1,0 +1,235 @@
+// Font Sizes
+.sm-font {
+  font-size: rem(14px);
+}
+.md-font {
+  font-size: rem(20px);
+}
+.lg-font {
+  font-size: rem(30px);
+}
+.xl-font {
+  font-size: rem(40px);
+}
+
+// List
+.clean-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  & > li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Background
+
+.glass-bg {
+  background: rgba(255, 255, 255, 0.87);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.178);
+}
+
+// Circles
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(#ff932e, #ff8f0f);
+}
+.circles {
+  z-index: -1;
+  position: absolute;
+  height: 270px;
+  width: 450px;
+  @include for-mobile-layout {
+    max-width: 40vw;
+  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle-1 {
+  @include for-mobile-layout {
+    top: -30px;
+  }
+  height: 180px;
+  width: 180px;
+  top: -50px;
+  left: -60px;
+}
+.circle-2 {
+  height: 200px;
+  width: 200px;
+  bottom: -90px;
+  right: -90px;
+  opacity: 0.8;
+}
+// Positioning
+.flex {
+  display: flex;
+  &.column {
+    flex-direction: column;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.align-center {
+    align-items: center;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.space-between {
+    justify-content: space-between;
+  }
+  &.space-around {
+    justify-content: space-around;
+  }
+  &.auto-center {
+    justify-content: center;
+    align-items: center;
+  }
+  > *.full-grow {
+    flex: 1;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+
+.center-block {
+  display: block;
+  margin: 0 auto;
+}
+
+// Media helpers
+.square-ratio {
+  @include aspect-ratio(1, 1);
+}
+
+.wide-ratio {
+  @include aspect-ratio(16, 9);
+}
+
+.square-3 {
+  @include aspect-ratio(4, 3);
+}
+
+// Buttons
+.simple-button {
+  background: transparent;
+  color: black;
+  font-size: inherit;
+  font-family: inherit;
+  border: 0;
+  opacity: 0.6;
+  transition: 0.3s all;
+  padding: 0;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: initial;
+    opacity: 0.2;
+  }
+
+  i {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 1;
+  }
+}
+
+.medium-button {
+  font-size: 1.5rem;
+}
+
+// Transitions
+.fast-trans {
+  transition: 0.25s all;
+}
+.normal-trans {
+  transition: 0.4s all;
+}
+.slow-trans {
+  transition: 0.7s all;
+}
+
+// Spacing
+.p5 {
+  padding: 5px;
+}
+.p10 {
+  padding: 10px;
+}
+.p20 {
+  padding: 20px;
+}
+.m5 {
+  margin: 5px;
+}
+.m10 {
+  margin: 10px;
+}
+.m20 {
+  margin: 20px;
+}
+
+// Normalize Background
+.normBackground {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+// Dividing
+.bottom-divider {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid lightgray;
+}
+
+// Others
+.blurred {
+  filter: blur(4px);
+}
+
+.simple-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 15px auto;
+
+  & > *:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  input:not([type="checkbox"]),
+  button {
+    padding: 5px 8px;
+    width: 100%;
+  }
+
+  .form-errors {
+    text-align: center;
+    margin-top: 24px;
+    color: red;
+    font-size: 15px;
+  }
+}

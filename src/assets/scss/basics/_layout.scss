@@ -1,0 +1,42 @@
+.container {
+    max-width: $normal-breakpoint;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+    @include for-mobile-layout {
+        max-width: initial;
+    }
+
+    @include for-tablet-layout {
+        max-width: $mobile-breakpoint;
+    }
+
+    @include for-normal-layout {
+        max-width: $tablet-breakpoint;
+    }
+
+    @include for-wide-layout {
+        max-width: $normal-breakpoint;
+    }
+}
+
+.gradient {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 100px;
+    z-index: -1;
+    background-image: url(https://i.ibb.co/JcxdTPc/g34-copy2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// GRIDS
+.simple-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
