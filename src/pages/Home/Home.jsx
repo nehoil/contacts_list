@@ -1,12 +1,12 @@
 import "./Home.scss";
 import { connect } from "react-redux";
 import { useState } from "react";
-import { addContact, updateContacts } from "@actions/userActions";
+import { addContact, updateContacts } from "../../store/actions/userActions";
 import { message } from "antd";
-import ContactsList from "@components/ContactsList";
-import ListTitle from "@components/ListTitle";
-import ListActions from "@components/ListActions";
-import ContactModal from "@components/ContactModal";
+import ContactsList from "../../cmps/ContactsList/ContactsList.jsx";
+import ListTitle from "../../cmps/ListTitle/ListTitle.jsx";
+import ListActions from "../../cmps/ListActions/ListActions.jsx";
+import ContactModal from "../../cmps/ContactModal/ContactModal.jsx";
 
 const _Home = ({ user, addContact, updateContacts }) => {
   const [selectedContact, setSelectedContact] = useState(null);

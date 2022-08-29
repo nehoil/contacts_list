@@ -1,4 +1,4 @@
-import userService from "@services/UserService";
+import userService from "../../services/UserService";
 
 const _setUser = user => ({ type: "SET_USER", user });
 

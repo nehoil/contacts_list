@@ -1,8 +1,8 @@
-import "@assets/scss/global.scss";
+import "./assets/scss/global.scss";
 import "./App.scss";
-import Navbar from "@components/NavBar";
+import Navbar from "./cmps/NavBar";
 import Home from "./pages/Home";
-import { loadUser } from "@actions/userActions";
+import { loadUser } from "./store/actions/userActions";
 
 import {
   HashRouter as Router,

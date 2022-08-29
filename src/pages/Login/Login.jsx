@@ -1,7 +1,7 @@
 import "./Login.scss";
 import { Button, Form, Input } from "antd";
 import { connect } from "react-redux";
-import { login } from "@actions/userActions";
+import { login } from "../../store/actions/userActions";
 import { message } from "antd";
 
 const _Login = ({ login }) => {
